@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Chihuhia or Muffin?</title>
+</head>
+
+<body>
+
+    <main>
+    <h1>Chihuhia or Muffin?</h1>
+
+    <form action="https://www.google.it/" method="post" enctype="multipart/form-data">
+        <label for="Chihuhia-or-Muffin">Upload your photo</label>
+        <input type="file" name="Chihuhia-or-Muffin" id="Chihuhia-or-Muffin" accept="image/*">
+        <button type="submit">Predict with AI integrations!</button>
+    </form>
+
+
+    <div class="result">
+        <h2>result</h2>
+    </div>
+
+
+    <div class="image-preview" id="image-preview">
+        <span>No found image.</span>
+    </div>
+
+</main>
+
+
+
+
+
+
+    <script>
+        // Seleziona l'input file e il contenitore dell'anteprima
+        const fileInput = document.getElementById('Chihuhia-or-Muffin');
+        const imagePreview = document.getElementById('image-preview');
+
+        // Aggiungi un event listener per il cambiamento dell'input
+        fileInput.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+
+            // Verifica se il file esiste ed è un'immagine
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+
+                // Quando il file è caricato, aggiorna l'anteprima
+                reader.onload = function (e) {
+                    imagePreview.innerHTML = `<img src="${e.target.result}" alt="Immagine caricata">`;
+                };
+
+                // Leggi il contenuto del file
+                reader.readAsDataURL(file);
+            } else {
+                // Se non è un'immagine, mostra un messaggio di errore
+                imagePreview.innerHTML = '<span>File non valido. Seleziona un\'immagine.</span>';
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

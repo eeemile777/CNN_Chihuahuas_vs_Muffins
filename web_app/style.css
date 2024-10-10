@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    font-family: Fira Code, sans-serif;
+    background-image: url("Firefly\ muffins\ and\ chihuhuas\ 35166.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1400px;
+
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1400px;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Sovrapposizione semi-trasparente nera */
+    z-index: 1;
+    /* L'overlay sarà sopra l'immagine di sfondo */
+    pointer-events: none;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+    /* Il contenuto rimane sopra l'overlay */
+    color: white;
+    
+    
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+
+form {
+    color: white;
+    margin: 30px 40px;
+    display: inline-block;
+    position: relative;
+    top: 100px;
+
+}
+
+input {
+    position: relative;
+    font-size: 16px;
+    padding: 1.5em;
+}
+
+h1:hover {
+    border-bottom: 1px solid #e9ecef;
+    box-shadow: 0 0.6em 0.6em -0.4em #9c6644;
+}
+
+
+input[type="file"] {
+    display: none;
+
+}
+
+label {
+    display: inline-block;
+    background-color: #3b4853;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    top: -80px;
+    left: 107%;
+
+
+}
+
+
+label:hover {
+    background-color: rgb(20, 18, 18);
+    border: 2px solid white;
+    transform: scale(1.1);
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.6em 0.6em -0.3em #f1ff5c;
+    cursor: pointer;
+}
+
+button {
+   
+    font-size: 18px;
+    position: relative;
+    top: 10px;
+    left: 55%;
+    padding: 1.2em 2.5em;
+    color: white;
+    background-color: #343a40;
+    box-shadow: #343a40 6px 6px 6px 2px;
+    border: 2px solid #e9ecef;
+
+}
+
+button:hover {
+    background-color:rgb(20, 18, 18);
+    border: 3px solid white;
+    /* transform: scale(1.1); */
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.6em 0.6em -0.3em #f1ff5c;
+    cursor: pointer;
+}
+
+
+.result {
+    width: 500px;
+    height: 100px;
+    background-color: #eaf4f4;
+    position: relative;
+    left: 35%;
+    top: 750px;
+
+}
+
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-preview {
+    width: 600px;
+    height: 500px;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    left: 30%;
+    top: 50px;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
+

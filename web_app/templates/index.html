@@ -35,7 +35,8 @@
     </div>
 
     <script>
-        document.getElementById('submitButton').addEventListener('click', function () {
+
+document.getElementById('submitButton').addEventListener('click', function () {
             document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth' });
         });
 
@@ -80,10 +81,11 @@
             // Mostra il risultato
             resultDiv.innerHTML = `<h2>${result.label}: ${result.confidence}% confidence</h2>`;
         });
-    </script>
 
 
+
     </script>
+
 </body>
 
 </html>

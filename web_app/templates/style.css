@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("Firefly\ muffins\ and\ chihuhuas\ 35166.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1550px;
+
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 150vh;
+}
+
+.format {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Stile del primo div (h1) */
+.format h1 {
+    font-size: 2em;
+}
+
+/* Stile del secondo div (input file) */
+#fileInput {
+    padding: 10px;
+    display: none;
+}
+
+/* Stile del terzo div (bottone) */
+#submitButton {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Stile del quarto div (box immagine) */
+#imageBox {
+    font-size: 1.4em;
+    font-weight: bold;
+    object-fit: cover;
+    text-align: center;
+    width: auto;
+    height: 500px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.5);
+    position: relative;
+    top: 100px;
+}
+
+#imageBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Stile del quinto div (rettangolo risultato) */
+#resultBox {
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 200px;
+    border-radius: 10px;
+}
+
+label:hover {
+    background-color: rgb(20, 18, 18);
+    border: 2px solid white;
+    transform: scale(1.1);
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.6em 0.6em -0.3em #f1ff5c;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(20, 18, 18);
+    border: 3px solid white;
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.6em 0.6em -0.3em #f1ff5c;
+    cursor: pointer;
+}
+
+label {
+    background-color: #3b4853;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 1.2em 2.3em;
+    color: white;
+    background-color: #343a40;
+    box-shadow: #343a40 6px 6px 6px 2px;
+    border: 2px solid #e9ecef;
+}
+
+h1 {
+    padding: 0.7em 1em;
+    border-bottom: #9c6644 solid 1px;
+    width: 400px;
+    display: inline-block;
+    margin: 0 auto;
+    color: white;
+}
+
+h1:hover {
+    border-bottom: 1px solid #e9ecef;
+    box-shadow: 0 0.6em 0.6em -0.4em #9c6644;
+}
+
+
+
+
+@media (max-width: 1100px) {
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #imageBox {
+        width: auto;
+        height: auto;
+    }
+
+    #resultBox {
+        width: 500px;
+        height: 100px;
+        top: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #imageBox {
+        width: auto;
+        height: auto;
+    }
+
+    #resultBox {
+        width: 400px;
+        height: 100px;
+        top: 100px;
+    }
+}
